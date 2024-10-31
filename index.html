@@ -88,6 +88,8 @@
         <div class="image-row" id="gallery-anime"></div>
         <h2 class="text-center">Maskotki</h2>
         <div class="image-row" id="gallery-maskotki"></div>
+        <h2 class="text-center">Itemy</h2>
+        <div class="image-row" id="gallery-itemy"></div>
       </div>
     </section>    
   </main>
@@ -132,12 +134,14 @@
   const galleryKlanowe = document.getElementById('gallery-klanowe');
   const galleryAnime = document.getElementById('gallery-anime');
   const galleryMaskotki = document.getElementById('gallery-maskotki');
-  const apiUrl = 'https://api.github.com/repos/Raster96/raster96.github.io/contents/img';
+  const galleryItemy = document.getElementById('gallery-itemy');
+  const apiUrl = 'https://api.github.com/repos/Odishia/odishia.github.io/contents/outfity';
 
   let imagesIndywidualne = [];
   let imagesKlanowe = [];
   let imagesAnime = [];
   let imagesMaskotki = [];
+  let imagesItemy = [];
   let combinedImages = [];
 
   async function fetchImages() {
@@ -168,6 +172,10 @@
             imagesMaskotki.push(img.src);
             img.onclick = () => openLightbox(combinedImages, img.src);
             galleryMaskotki.appendChild(img);
+            else if (file.name.includes('item')) {
+            imagesItemy.push(img.src);
+            img.onclick = () => openLightbox(combinedImages, img.src);
+            galleryItemy.appendChild(img);
           }
         }
       });
@@ -176,7 +184,8 @@
         ...imagesIndywidualne,
         ...imagesKlanowe,
         ...imagesAnime,
-        ...imagesMaskotki
+        ...imagesMaskotki,
+        ...imagesItemy
       ];
     } catch (error) {
       console.error('Error fetching images:', error);
