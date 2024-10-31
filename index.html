@@ -153,7 +153,7 @@
         if (file.type === 'file' && file.download_url.endsWith('.gif')) {
           const img = document.createElement('img');
           img.src = file.download_url;
-          img.alt = `Image ${file.name}`;
+          img.alt = `${file.name}`;
           img.classList.add('img-fluid');
 
           if (file.name.includes('out')) {
@@ -172,7 +172,7 @@
             imagesMaskotki.push(img.src);
             img.onclick = () => openLightbox(combinedImages, img.src);
             galleryMaskotki.appendChild(img);
-            else if (file.name.includes('item')) {
+          } else if (file.name.includes('item')) {
             imagesItemy.push(img.src);
             img.onclick = () => openLightbox(combinedImages, img.src);
             galleryItemy.appendChild(img);
