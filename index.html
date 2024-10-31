@@ -135,44 +135,48 @@ const galleryMaskotki = document.getElementById('gallery-maskotki');
 const apiUrl = 'https://api.github.com/repos/Odishia/odishia.github.io/contents/outfity';
 
 async function fetchImages() {
-  try {
-    const response = await fetch(apiUrl);
-    const data = await response.json();
-
-    data.forEach(file => {
-      if (file.type === 'file' && file.download_url.endsWith('.gif')) {
-        const img = document.createElement('img');
-        img.src = file.download_url;
-        img.alt = `Image ${file.name}`;
-        img.classList.add('img-fluid');
-        img.onclick = () => openLightbox(img.src);
-
-        if (file.name.includes('out')) {
-          galleryIndywidualne.appendChild(img);
-        } else if (file.name.includes('clan')) {
-          galleryKlanowe.appendChild(img);
-        } else if (file.name.includes('anime')) {
-          galleryAnime.appendChild(img);
-        } else if (file.name.includes('pet')) {
-          galleryMaskotki.appendChild(img);
+    try {
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+  
+      data.forEach(file => {
+        if (file.type === 'file' && file.download_url.endsWith('.gif')) {
+          const img = document.createElement('img');
+          img.src = file.download_url;
+          img.alt = `${file.name}`;
+          img.classList.add('img-fluid');
+          img.onclick = () => openLightbox(file.download_url);
+  
+          if (file.name.includes('out')) {
+            galleryIndywidualne.appendChild(img);
+          } else if (file.name.includes('clan')) {
+            galleryKlanowe.appendChild(img);
+          } else if (file.name.includes('anime')) {
+            galleryAnime.appendChild(img);
+          } else if (file.name.includes('pet')) {
+            galleryMaskotki.appendChild(img);
+          }
         }
-      }
-    });
-  } catch (error) {
-    console.error('Error fetching images:', error);
+      });
+    } catch (error) {
+      console.error('Error fetching images:', error);
+    }
   }
-}
-
-function openLightbox(src) {
-  const lightbox = GLightbox({
-    href: src,
-    type: 'image',
-  });
-  lightbox.open();
-}
-
-fetchImages();
-  </script>  
+  
+  function openLightbox(src) {
+    const lightbox = GLightbox({
+      elements: [
+        {
+          href: src,
+          type: 'image'
+        }
+      ]
+    });
+    lightbox.open();
+  }
+  
+  fetchImages();  
+  </script>   
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
