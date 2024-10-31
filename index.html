@@ -128,59 +128,76 @@
 
   <!-- Gallery Script -->
   <script>
-const galleryIndywidualne = document.getElementById('gallery-indywidualne');
-const galleryKlanowe = document.getElementById('gallery-klanowe');
-const galleryAnime = document.getElementById('gallery-anime');
-const galleryMaskotki = document.getElementById('gallery-maskotki');
-const apiUrl = 'https://api.github.com/repos/Odishia/odishia.github.io/contents/outfity';
+  const galleryIndywidualne = document.getElementById('gallery-indywidualne');
+  const galleryKlanowe = document.getElementById('gallery-klanowe');
+  const galleryAnime = document.getElementById('gallery-anime');
+  const galleryMaskotki = document.getElementById('gallery-maskotki');
+  const apiUrl = 'https://api.github.com/repos/Raster96/raster96.github.io/contents/img';
 
-async function fetchImages() {
+  let imagesIndywidualne = [];
+  let imagesKlanowe = [];
+  let imagesAnime = [];
+  let imagesMaskotki = [];
+  let combinedImages = [];  // Połączone wszystkie obrazy
+
+  async function fetchImages() {
     try {
       const response = await fetch(apiUrl);
       const data = await response.json();
-  
+
       data.forEach(file => {
         if (file.type === 'file' && file.download_url.endsWith('.gif')) {
           const img = document.createElement('img');
           img.src = file.download_url;
-          img.alt = `${file.name}`;
+          img.alt = `Image ${file.name}`;
           img.classList.add('img-fluid');
-          img.onclick = () => openLightbox(file.download_url);
-  
+
           if (file.name.includes('out')) {
+            imagesIndywidualne.push(img.src);
+            img.onclick = () => openLightbox(combinedImages, img.src);
             galleryIndywidualne.appendChild(img);
           } else if (file.name.includes('clan')) {
+            imagesKlanowe.push(img.src);
+            img.onclick = () => openLightbox(combinedImages, img.src);
             galleryKlanowe.appendChild(img);
           } else if (file.name.includes('anime')) {
+            imagesAnime.push(img.src);
+            img.onclick = () => openLightbox(combinedImages, img.src);
             galleryAnime.appendChild(img);
           } else if (file.name.includes('pet')) {
+            imagesMaskotki.push(img.src);
+            img.onclick = () => openLightbox(combinedImages, img.src);
             galleryMaskotki.appendChild(img);
           }
         }
       });
+
+      combinedImages = [
+        ...imagesIndywidualne,
+        ...imagesKlanowe,
+        ...imagesAnime,
+        ...imagesMaskotki
+      ];
     } catch (error) {
       console.error('Error fetching images:', error);
     }
   }
-  
-  function openLightbox(src) {
+
+  function openLightbox(imageArray, src) {
+    const elements = imageArray.map(imageSrc => ({ href: imageSrc, type: 'image' }));
+    const startIndex = imageArray.indexOf(src);
     const lightbox = GLightbox({
-      elements: [
-        {
-          href: src,
-          type: 'image'
-        }
-      ]
+      elements: elements,
+      startAt: startIndex,
     });
     lightbox.open();
   }
-  
-  fetchImages();  
-  </script>   
 
+  fetchImages();
+  </script>
+  
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>
