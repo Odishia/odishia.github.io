@@ -79,11 +79,7 @@
 
                 <nav id="navmenu" class="navmenu">
                     <ul>
-                        <li>
-                            <a href="#indywidualne" class="active"
-                                >Outfity indywidualne<br
-                            /></a>
-                        </li>
+                        <li><a href="#indywidualne">Outfity indywidualne</a></li>
                         <li><a href="#klanowe">Outfity klanowe</a></li>
                         <li><a href="#anime">Outfity anime</a></li>
                         <li><a href="#maskotki">Maskotki</a></li>
@@ -366,11 +362,6 @@
         <script>
             const navLinks = document.querySelectorAll('#navmenu a');
 
-            function setActiveLinkOnClick(event) {
-              navLinks.forEach(link => link.classList.remove('active'));
-              event.currentTarget.classList.add('active');
-            }
-
             function smoothScrollWithOffset(event) {
               event.preventDefault();
 
@@ -378,7 +369,7 @@
               const targetSection = document.getElementById(targetId);
 
               if (targetSection) {
-                const offsetPosition = targetSection.offsetTop - 100; // Offset by 10 pixels
+                const offsetPosition = targetSection.offsetTop - 100;
                 window.scrollTo({
                   top: offsetPosition,
                   behavior: 'smooth'
@@ -387,7 +378,6 @@
             }
 
             navLinks.forEach(link => {
-              link.addEventListener('click', setActiveLinkOnClick);
               link.addEventListener('click', smoothScrollWithOffset);
             });
         </script>
