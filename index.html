@@ -1,290 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Odishia - Margonem PixelArt</title>
+        <meta
+            name="description"
+            content="Strona z pracami PixelArt do gry Margonem wykonanymi przez Odishia."
+        />
+        <meta
+            name="keywords"
+            content="odishia, odishia margonem, margonem, pixelart, outfity margonem, indywidualne outfity margonem, grafik margonem"
+        />
+        <meta
+            property="og:image"
+            content="https://raw.githubusercontent.com/Odishia/odishia.github.io/refs/heads/main/assets/img/logo.png"
+        />
+        <meta property="og:color" content="#27a776" />
+        <meta name="theme-color" content="#27a776" />
+        <meta name="msapplication-TileColor" content="#27a776" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Odishia - Margonem PixelArt</title>
-  <meta name="description" content="Strona z pracami PixelArt do gry Margonem wykonanymi przez Odishia.">
-  <meta name="keywords" content="odishia, odishia margonem, margonem, pixelart, outfity margonem, indywidualne outfity margonem, grafik margonem">
-  <meta property="og:image" content="https://raw.githubusercontent.com/Odishia/odishia.github.io/refs/heads/main/assets/img/logo.png" />
-  <meta property="og:color" content="#27a776" />
-  <meta name="theme-color" content="#27a776" />
-  <meta name="msapplication-TileColor" content="#27a776" /> 
+        <!-- Favicons -->
+        <link href="assets/img/favicon.png" rel="icon" />
+        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Cardo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet"
+        />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Cardo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <!-- Vendor CSS Files -->
+        <link
+            href="assets/vendor/bootstrap/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+            rel="stylesheet"
+        />
+        <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+        <link
+            href="assets/vendor/glightbox/css/glightbox.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="assets/vendor/swiper/swiper-bundle.min.css"
+            rel="stylesheet"
+        />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        <!-- Main CSS File -->
+        <link href="assets/css/main.css" rel="stylesheet" />
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
+        <!-- =======================================================
   * Template Name: PhotoFolio
   * Template URL: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/
   * Updated: Aug 07 2024 with Bootstrap v5.3.3
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-</head>
+    </head>
 
-<body class="index-page">
+    <body class="index-page">
+        <header id="header" class="header d-flex align-items-center sticky-top">
+            <div
+                class="container-fluid position-relative d-flex align-items-center justify-content-between"
+            >
+                <a
+                    href="index.html"
+                    class="logo d-flex align-items-center me-auto me-xl-0"
+                >
+                    <!-- Uncomment the line below if you also wish to use an image logo -->
+                    <img src="assets/img/logo.png" alt="" />
+                    <h1 class="sitename">Odishia</h1>
+                </a>
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+                <nav id="navmenu" class="navmenu">
+                    <ul>
+                        <li>
+                            <a href="#indywidualne" class="active"
+                                >Outfity indywidualne<br
+                            /></a>
+                        </li>
+                        <li><a href="#klanowe">Outfity klanowe</a></li>
+                        <li><a href="#anime">Outfity anime</a></li>
+                        <li><a href="#maskotki">Maskotki</a></li>
+                        <li><a href="#itemy">Itemy</a></li>
+                    </ul>
+                    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                </nav>
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo.png" alt="">
-        <h1 class="sitename">Odishia</h1>
-      </a>
+                <div class="header-social-links"></div>
+            </div>
+        </header>
 
-      <nav id="navmenu" class="navmenu">
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+        <main class="main">
+            <!-- Hero Section -->
+            <section id="hero" class="hero section">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div
+                            class="col-lg-6 text-center"
+                            data-aos="fade-up"
+                            data-aos-delay="100"
+                        >
+                            <h2>
+                                <span
+                                    >Jestem Odishia, wykonuję indywidualne
+                                    grafiki do gry Margonem.</span
+                                >
+                            </h2>
+                            <p>
+                                <img
+                                    src="assets/img/discord.png"
+                                    alt="Discord icon"
+                                    class="discord-icon"
+                                    width="32"
+                                    height="32"
+                                />
+                                Discord: odishia
+                            </p>
+                            <a
+                                href="https://www.margonem.pl/profile/view,8400891"
+                                class="btn-get-started"
+                                target="_blank"
+                                >Profil Margonem<br
+                            /></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /Hero Section -->
 
-      <div class="header-social-links">
-      </div>
+            <!-- Gallery Sections -->
+            <section id="gallery" class="gallery section">
+                <div class="container-fluid" data-aos="fade-up">
+                    <h2 id="indywidualne" class="text-center">
+                        Outfity indywidualne
+                    </h2>
+                    <div class="sort-options text-center">
+                        <label for="sort-indywidualne">Sortuj:</label>
+                        <select
+                            id="sort-indywidualne"
+                            onchange="sortGallery('gallery-indywidualne', this.value)"
+                        >
+                            <option value="newest">Najnowsze</option>
+                            <option value="oldest">Najstarsze</option>
+                        </select>
+                    </div>
+                    <div class="image-row" id="gallery-indywidualne"></div>
 
-    </div>
-  </header>
+                    <h2 id="klanowe" class="text-center">Outfity klanowe</h2>
+                    <div class="sort-options text-center">
+                        <label for="sort-klanowe">Sortuj:</label>
+                        <select
+                            id="sort-klanowe"
+                            onchange="sortGallery('gallery-klanowe', this.value)"
+                        >
+                            <option value="newest">Najnowsze</option>
+                            <option value="oldest">Najstarsze</option>
+                        </select>
+                    </div>
+                    <div class="image-row" id="gallery-klanowe"></div>
 
-  <main class="main">
+                    <h2 id="anime" class="text-center">Outfity anime</h2>
+                    <div class="sort-options text-center">
+                        <label for="sort-anime">Sortuj:</label>
+                        <select
+                            id="sort-anime"
+                            onchange="sortGallery('gallery-anime', this.value)"
+                        >
+                            <option value="newest">Najnowsze</option>
+                            <option value="oldest">Najstarsze</option>
+                        </select>
+                    </div>
+                    <div class="image-row" id="gallery-anime"></div>
 
-     <!-- Hero Section -->
-     <section id="hero" class="hero section">
+                    <h2 id="maskotki" class="text-center">Maskotki</h2>
+                    <div class="sort-options text-center">
+                        <label for="sort-maskotki">Sortuj:</label>
+                        <select
+                            id="sort-maskotki"
+                            onchange="sortGallery('gallery-maskotki', this.value)"
+                        >
+                            <option value="newest">Najnowsze</option>
+                            <option value="oldest">Najstarsze</option>
+                        </select>
+                    </div>
+                    <div class="image-row" id="gallery-maskotki"></div>
 
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-delay="100">
-            <h2><span>Jestem Odishia, wykonuję indywidualne grafiki do gry Margonem.</span></h2>
-            <p><img src="assets/img/discord.png" alt="Discord icon" class="discord-icon" width="32" height="32"> Discord: odishia</p>
-            <a href="https://www.margonem.pl/profile/view,8400891" class="btn-get-started" target="_blank">Profil Margonem<br></a>
-          </div>
+                    <h2 id="itemy" class="text-center">Itemy</h2>
+                    <div class="sort-options text-center">
+                        <label for="sort-itemy">Sortuj:</label>
+                        <select
+                            id="sort-itemy"
+                            onchange="sortGallery('gallery-itemy', this.value)"
+                        >
+                            <option value="newest">Najnowsze</option>
+                            <option value="oldest">Najstarsze</option>
+                        </select>
+                    </div>
+                    <div class="image-row" id="gallery-itemy"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer" class="footer">
+            <div class="container">
+                <div class="copyright text-center">
+                    <p>
+                        © <span>Copyright ●</span
+                        ><strong class="px-1 sitename">Odishia</strong
+                        ><span>● All Rights Reserved.</span>
+                    </p>
+                </div>
+                <div class="social-links d-flex justify-content-center"></div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you've purchased the pro version. -->
+                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+                    Designed by
+                    <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scroll Top -->
+        <a
+            href="#"
+            id="scroll-top"
+            class="scroll-top d-flex align-items-center justify-content-center"
+            ><i class="bi bi-arrow-up-short"></i
+        ></a>
+
+        <!-- Preloader -->
+        <div id="preloader">
+            <div class="line"></div>
         </div>
-      </div>
-    </section><!-- /Hero Section -->
 
-    <!-- Gallery Sections -->
-<section id="gallery" class="gallery section">
-  <div class="container-fluid" data-aos="fade-up">    
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+        <script src="assets/vendor/aos/aos.js"></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-    <h2 class="text-center">Outfity indywidualne</h2>
-    <div class="sort-options text-center">
-      <label for="sort-indywidualne">Sortuj:</label>
-      <select id="sort-indywidualne" onchange="sortGallery('gallery-indywidualne', this.value)">
-        <option value="newest">Najnowsze</option>
-        <option value="oldest">Najstarsze</option>
-      </select>
-    </div>
-    <div class="image-row" id="gallery-indywidualne"></div>
+        <!-- Gallery Script -->
+        <script>
+            const galleryIndywidualne = document.getElementById('gallery-indywidualne');
+            const galleryKlanowe = document.getElementById('gallery-klanowe');
+            const galleryAnime = document.getElementById('gallery-anime');
+            const galleryMaskotki = document.getElementById('gallery-maskotki');
+            const galleryItemy = document.getElementById('gallery-itemy');
+            const apiUrl = 'https://api.github.com/repos/Odishia/odishia.github.io/contents/outfity';
 
-    <h2 class="text-center">Outfity klanowe</h2>
-    <div class="sort-options text-center">
-      <label for="sort-klanowe">Sortuj:</label>
-      <select id="sort-klanowe" onchange="sortGallery('gallery-klanowe', this.value)">
-        <option value="newest">Najnowsze</option>
-        <option value="oldest">Najstarsze</option>
-      </select>
-    </div>
-    <div class="image-row" id="gallery-klanowe"></div>
+            let imagesIndywidualne = [];
+            let imagesKlanowe = [];
+            let imagesAnime = [];
+            let imagesMaskotki = [];
+            let imagesItemy = [];
+            let combinedImages = [];
 
-    <h2 class="text-center">Outfity anime</h2>
-    <div class="sort-options text-center">
-      <label for="sort-anime">Sortuj:</label>
-      <select id="sort-anime" onchange="sortGallery('gallery-anime', this.value)">
-        <option value="newest">Najnowsze</option>
-        <option value="oldest">Najstarsze</option>
-      </select>
-    </div>
-    <div class="image-row" id="gallery-anime"></div>
+            async function fetchImages() {
+              try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
 
-    <h2 class="text-center">Maskotki</h2>
-    <div class="sort-options text-center">
-      <label for="sort-maskotki">Sortuj:</label>
-      <select id="sort-maskotki" onchange="sortGallery('gallery-maskotki', this.value)">
-        <option value="newest">Najnowsze</option>
-        <option value="oldest">Najstarsze</option>
-      </select>
-    </div>
-    <div class="image-row" id="gallery-maskotki"></div>
+                data.sort((a, b) => b.name.localeCompare(a.name));
 
-    <h2 class="text-center">Itemy</h2>
-    <div class="sort-options text-center">
-      <label for="sort-itemy">Sortuj:</label>
-      <select id="sort-itemy" onchange="sortGallery('gallery-itemy', this.value)">
-        <option value="newest">Najnowsze</option>
-        <option value="oldest">Najstarsze</option>
-      </select>
-    </div>
-    <div class="image-row" id="gallery-itemy"></div>
+                data.forEach(file => {
+                  if (file.type === 'file' && file.download_url.endsWith('.gif')) {
+                    const img = document.createElement('img');
+                    img.src = file.download_url;
+                    img.alt = `${file.name}`;
+                    img.classList.add('img-fluid');
 
-  </div>
-</section> 
-  </main>
+                    if (file.name.includes('out')) {
+                      imagesIndywidualne.push(img.src);
+                      img.onclick = () => openLightbox(imagesIndywidualne, img.src);
+                      galleryIndywidualne.appendChild(img);
+                    } else if (file.name.includes('clan')) {
+                      imagesKlanowe.push(img.src);
+                      img.onclick = () => openLightbox(imagesKlanowe, img.src);
+                      galleryKlanowe.appendChild(img);
+                    } else if (file.name.includes('anime')) {
+                      imagesAnime.push(img.src);
+                      img.onclick = () => openLightbox(imagesAnime, img.src);
+                      galleryAnime.appendChild(img);
+                    } else if (file.name.includes('pet')) {
+                      imagesMaskotki.push(img.src);
+                      img.onclick = () => openLightbox(imagesMaskotki, img.src);
+                      galleryMaskotki.appendChild(img);
+                    } else if (file.name.includes('item')) {
+                      imagesItemy.push(img.src);
+                      img.onclick = () => openLightbox(imagesItemy, img.src);
+                      galleryItemy.appendChild(img);
+                    }
+                  }
+                });
 
-  <footer id="footer" class="footer">
+                combinedImages = [
+                  ...imagesIndywidualne,
+                  ...imagesKlanowe,
+                  ...imagesAnime,
+                  ...imagesMaskotki,
+                  ...imagesItemy
+                ];
+              } catch (error) {
+                console.error('Error fetching images:', error);
+              }
+            }
 
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright ●</span><strong class="px-1 sitename">Odishia</strong><span>● All Rights Reserved.</span></p>
-      </div>
-      <div class="social-links d-flex justify-content-center">
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
+            function sortGallery(galleryId, sortOrder) {
+              const gallery = document.getElementById(galleryId);
+              const images = Array.from(gallery.getElementsByTagName('img'));
 
-  </footer>
+              images.sort((a, b) => {
+                const aName = parseInt(a.alt.match(/\d+/)[0]);
+                const bName = parseInt(b.alt.match(/\d+/)[0]);
+                return sortOrder === 'newest' ? bName - aName : aName - bName;
+              });
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+              gallery.innerHTML = '';
+              images.forEach(img => gallery.appendChild(img));
 
-  <!-- Preloader -->
-  <div id="preloader">
-    <div class="line"></div>
-  </div>
+              let imagesArray;
+              switch (galleryId) {
+                case 'gallery-indywidualne':
+                  imagesArray = imagesIndywidualne;
+                  break;
+                case 'gallery-klanowe':
+                  imagesArray = imagesKlanowe;
+                  break;
+                case 'gallery-anime':
+                  imagesArray = imagesAnime;
+                  break;
+                case 'gallery-maskotki':
+                  imagesArray = imagesMaskotki;
+                  break;
+                case 'gallery-itemy':
+                  imagesArray = imagesItemy;
+                  break;
+              }
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+              imagesArray.length = 0;
+              images.forEach(img => imagesArray.push(img.src));
+            }
 
- <!-- Gallery Script -->
-<script>
-  const galleryIndywidualne = document.getElementById('gallery-indywidualne');
-  const galleryKlanowe = document.getElementById('gallery-klanowe');
-  const galleryAnime = document.getElementById('gallery-anime');
-  const galleryMaskotki = document.getElementById('gallery-maskotki');
-  const galleryItemy = document.getElementById('gallery-itemy');
-  const apiUrl = 'https://api.github.com/repos/Odishia/odishia.github.io/contents/outfity';
-  
-  let imagesIndywidualne = [];
-  let imagesKlanowe = [];
-  let imagesAnime = [];
-  let imagesMaskotki = [];
-  let imagesItemy = [];
-  let combinedImages = [];
-  
-  async function fetchImages() {
-    try {
-      const response = await fetch(apiUrl);
-      const data = await response.json();
-  
-      data.sort((a, b) => b.name.localeCompare(a.name));
-  
-      data.forEach(file => {
-        if (file.type === 'file' && file.download_url.endsWith('.gif')) {
-          const img = document.createElement('img');
-          img.src = file.download_url;
-          img.alt = `${file.name}`;
-          img.classList.add('img-fluid');
-  
-          if (file.name.includes('out')) {
-            imagesIndywidualne.push(img.src);
-            img.onclick = () => openLightbox(imagesIndywidualne, img.src);
-            galleryIndywidualne.appendChild(img);
-          } else if (file.name.includes('clan')) {
-            imagesKlanowe.push(img.src);
-            img.onclick = () => openLightbox(imagesKlanowe, img.src);
-            galleryKlanowe.appendChild(img);
-          } else if (file.name.includes('anime')) {
-            imagesAnime.push(img.src);
-            img.onclick = () => openLightbox(imagesAnime, img.src);
-            galleryAnime.appendChild(img);
-          } else if (file.name.includes('pet')) {
-            imagesMaskotki.push(img.src);
-            img.onclick = () => openLightbox(imagesMaskotki, img.src);
-            galleryMaskotki.appendChild(img);
-          } else if (file.name.includes('item')) {
-            imagesItemy.push(img.src);
-            img.onclick = () => openLightbox(imagesItemy, img.src);
-            galleryItemy.appendChild(img);
-          }
-        }
-      });
-  
-      combinedImages = [
-        ...imagesIndywidualne,
-        ...imagesKlanowe,
-        ...imagesAnime,
-        ...imagesMaskotki,
-        ...imagesItemy
-      ];
-    } catch (error) {
-      console.error('Error fetching images:', error);
-    }
-  }
-  
-  function sortGallery(galleryId, sortOrder) {
-    const gallery = document.getElementById(galleryId);
-    const images = Array.from(gallery.getElementsByTagName('img'));
-  
-    images.sort((a, b) => {
-      const aName = parseInt(a.alt.match(/\d+/)[0]);
-      const bName = parseInt(b.alt.match(/\d+/)[0]);
-      return sortOrder === 'newest' ? bName - aName : aName - bName;
-    });
-  
-    gallery.innerHTML = '';
-    images.forEach(img => gallery.appendChild(img));
-  
-    let imagesArray;
-    switch (galleryId) {
-      case 'gallery-indywidualne':
-        imagesArray = imagesIndywidualne;
-        break;
-      case 'gallery-klanowe':
-        imagesArray = imagesKlanowe;
-        break;
-      case 'gallery-anime':
-        imagesArray = imagesAnime;
-        break;
-      case 'gallery-maskotki':
-        imagesArray = imagesMaskotki;
-        break;
-      case 'gallery-itemy':
-        imagesArray = imagesItemy;
-        break;
-    }
-  
-    imagesArray.length = 0;
-    images.forEach(img => imagesArray.push(img.src));
-  }
-  
-  function openLightbox(imageArray, src) {
-    const elements = imageArray.map(imageSrc => ({ href: imageSrc, type: 'image' }));
-    const startIndex = imageArray.indexOf(src);
-    const lightbox = GLightbox({
-      elements: elements,
-      startAt: startIndex,
-    });
-    lightbox.open();
-  }
-  
-  fetchImages();
-  </script>  
-  
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-</body>
-</html> 
+            function openLightbox(imageArray, src) {
+              const elements = imageArray.map(imageSrc => ({ href: imageSrc, type: 'image' }));
+              const startIndex = imageArray.indexOf(src);
+              const lightbox = GLightbox({
+                elements: elements,
+                startAt: startIndex,
+              });
+              lightbox.open();
+            }
+
+            fetchImages();
+        </script>
+
+        <script>
+            const navLinks = document.querySelectorAll('#navmenu a');
+
+            function setActiveLinkOnClick(event) {
+              navLinks.forEach(link => link.classList.remove('active'));
+              event.currentTarget.classList.add('active');
+            }
+
+            function smoothScrollWithOffset(event) {
+              event.preventDefault();
+
+              const targetId = event.currentTarget.getAttribute('href').substring(1);
+              const targetSection = document.getElementById(targetId);
+
+              if (targetSection) {
+                const offsetPosition = targetSection.offsetTop - 100; // Offset by 10 pixels
+                window.scrollTo({
+                  top: offsetPosition,
+                  behavior: 'smooth'
+                });
+              }
+            }
+
+            navLinks.forEach(link => {
+              link.addEventListener('click', setActiveLinkOnClick);
+              link.addEventListener('click', smoothScrollWithOffset);
+            });
+        </script>
+
+        <!-- Main JS File -->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
