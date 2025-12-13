@@ -268,7 +268,7 @@
                 data.sort((a, b) => b.name.localeCompare(a.name));
 
                 data.forEach(file => {
-                  if (file.type === 'file' && file.download_url.endsWith('.gif')) {
+                  if (file.type === 'file' && (file.download_url.endsWith('.gif') || file.download_url.endsWith('.png'))) {
                     const img = document.createElement('img');
                     img.src = file.download_url;
                     img.alt = `${file.name}`;
