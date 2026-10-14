@@ -760,6 +760,10 @@ section,
   height: auto;
 }
 
+#gallery-maskotki img {
+  object-fit: contain;
+}
+
 .sort-options {
   font-size: 0.9rem;
   margin-bottom: 1rem;
